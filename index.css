@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+.left-50 {
+    left: 50%;
+}
+.right-50 {
+    right: 50%;
+}
+.top-50 {
+    top: 50%;
+}
+
+
+
+.-z-1 {
+    z-index: -1;
+}
+
+.secondary-title {
+    @apply text-3xl font-bold;
+}
+
+.secondary-title::before {
+    content: "";
+    @apply block w-12 h-2 bg-theme rounded-full mb-1;
+}
+
+.section-paragraph {
+    @apply text-secondary my-6 w-full max-w-3xl;
+}
+
+.badge {
+    @apply px-4 py-2 text-sm rounded bg-badge;
+}
+
+[id] {
+scroll-margin-top: 100px;
+}
+
+.left-percentage {
+    left: 5%;
+}
+
+.h-screen-partial {
+    height: 80vh;
+}
+
+.nav-dot {
+    transition: background 200ms, border-color 200ms;
+}
+
+.selected-circle {
+    @apply border-theme bg-theme;
+}
+
+.nav-dot:hover span {
+    opacity: 1;
+}
+
+#hover-btn:hover {
+    background: white;
+    color: black;
+}
+
+.card {
+    transition: 1s;
+}
+
+.card:hover .projectcard{
+    right: 0;
+    transition: ease-in-out 1.5s;
+}
+
+/* .show {
+    display: grid;
+    grid-template-columns: 3;
+    
+} */
+
+.close {
+    display: none;
+    z-index: 100;
+}
+.show {
+    display: block;
+    z-index: 100;
+}
+
+.mobilenav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    right: 0;
+    top: 0;
+    /* background-color: #9191A4; */
+    color: white;
+    height: 40vh;
+    width: 100%;
+    z-index: 1;
+    gap: 10px;
+    padding: 4em 2em;
+    font-size: larger;
+    animation: right-to-left ease-in-out .6s;
+    backdrop-filter: blur(10px);
+}
+@keyframes right-to-left {
+    0%   {right:0; top:-100%;}
+    100% {right:0px; top:0px;}
+  }
+.mobilenav a:hover {
+    color: black;
+}
+
+#mobilenav{
+    transition: ease-in-out 1.5s;
+}
+.closebtn {
+    position: fixed;
+    right: 1em;
+    top: 1em;
+}
+
+@media only screen and (max-width:760px) {
+    header {
+        transition: ease-in-out 1.5s;
+        position:fixed;
+        top: 0;
+        width: 100%;
+        background:#17171F;
+        z-index: 100;
+    }
+}
